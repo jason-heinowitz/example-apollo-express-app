@@ -1,0 +1,36 @@
+type Query {
+  posts: [Post!]!
+  post(id: ID): Post!
+  users: [User!]!
+  date: Date!
+}
+
+type Mutation {
+  createPost(data: CreatePostInput): Post!
+}
+
+type Subscription {
+  posts: Post!
+}
+
+input CreatePostInput {
+  title: String!
+  body: String!
+  user: ID!
+}
+
+type Post {
+  id: ID!
+  title: String!
+  body: String!
+  user: User!
+}
+
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  posts: [Post]
+}
+
+scalar Date
