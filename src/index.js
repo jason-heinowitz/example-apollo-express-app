@@ -16,6 +16,7 @@ const typeDefs = fs.readFileSync(path.join(__dirname, './schema.graphql'), 'utf8
 const pubsub = new PubSub();
 
 const server = new ApolloServer({
+  tracing: true,
   typeDefs,
   resolvers: {
     Query,
