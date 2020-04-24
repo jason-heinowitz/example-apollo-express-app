@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js --exec babel-node"
   },
   "keywords": [],
-  "author": "Jason Heinowitz",
+  "author": "Jason Heinowitz, David Zhang",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.12.0",

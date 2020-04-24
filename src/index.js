@@ -35,7 +35,7 @@ const server = new ApolloServer({
 const app = express();
 app.use(bodyParser.json(), bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
-  res.send('no u');
+  res.status(200).json('Route reached.');
 });
 
 server.applyMiddleware({ app });
